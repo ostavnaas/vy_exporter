@@ -1,0 +1,11 @@
+groups:
+- name: alert.rules
+  rules:
+  - alert: vy_train_is_late
+    expr: vy_arrival_after_schedule_seconds > 60
+    for: 1m
+    labels:
+      severity: "critical"
+    annotations:
+      summary: "Train from {{ $labels.from }} to {{ $labels.to }} scheduled {{ $labels.departure_scheduled }} are late"
+      description: "Train from {{ $labels.from }} to {{ $labels.to }} scheduled {{ $labels.departure_scheduled }} are late"

@@ -15,13 +15,13 @@ func main() {
 	nsb := newNSBCollector()
     nsb.TrainTravel = []TrainTravel{
         TrainTravel{
-            from: "Hell",
-            to: "Lilleby",
+            from: "Lilleby",
+            to: "Hell",
             depatureTime: "15:10",
         },
         TrainTravel{
-            from: "Lilleby",
-            to: "Hell",
+            from: "Hell",
+            to: "Lilleby",
             depatureTime: "06:20",
         },
     }
